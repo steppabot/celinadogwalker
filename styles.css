@@ -1224,3 +1224,7 @@ header {
         padding: 9px 14px;
     }
 }
+/* Hide Elfsight branding */
+a[href*="elfsight.com/google-reviews-widget"] {
+    display: none !important;
+}
