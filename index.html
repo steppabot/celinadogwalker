@@ -128,25 +128,6 @@ BOOK YOUR FREE MEET & GREET
 <div class="elfsight-app-9e4d48f8-3f90-41f6-afde-8b1faced5c48" data-elfsight-app-lazy></div>
 
   
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  function removeElfsightBranding() {
-    document.querySelectorAll('a[href*="elfsight.com"]').forEach(el => el.remove());
-  }
-
-  removeElfsightBranding();
-
-  const observer = new MutationObserver(() => {
-    removeElfsightBranding();
-  });
-
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-});
-</script>
-  
 <section class="service-areas">
 
 <div class="service-areas-container">
@@ -193,6 +174,28 @@ Phone:
 
 </footer>
 
-
 </body>
+  
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function removeElfsightBranding() {
+        var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+        if (elfsightLink) {
+            elfsightLink.style.display = 'none';
+        }
+    }
+
+    removeElfsightBranding();
+
+    var observer = new MutationObserver(function() {
+        removeElfsightBranding();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    setInterval(removeElfsightBranding, 1000);
+});
+</script>
+
+
 </html>
