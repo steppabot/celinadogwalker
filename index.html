@@ -127,12 +127,23 @@ BOOK YOUR FREE MEET & GREET
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-9e4d48f8-3f90-41f6-afde-8b1faced5c48" data-elfsight-app-lazy></div>
 
+  
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const elfsightBrand = document.querySelector('a[href*="elfsight.com"]');
-  if (elfsightBrand) {
-    elfsightBrand.remove();
+  function removeElfsightBranding() {
+    document.querySelectorAll('a[href*="elfsight.com"]').forEach(el => el.remove());
   }
+
+  removeElfsightBranding();
+
+  const observer = new MutationObserver(() => {
+    removeElfsightBranding();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 });
 </script>
   
