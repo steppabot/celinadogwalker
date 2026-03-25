@@ -44,12 +44,6 @@
 </head>
 
 <body class="celina-domain-page">
-  <div id="notification-bar">
-    <p>🎖️ Veterans & First Responders receive <strong>10% OFF</strong> all Services!</p>
-    <p class="banner-phone">📞 Call Now: <a href="tel:2147367923">214-736-7923</a></p>
-    <span class="close-btn" onclick="closeNotificationBar()">✖</span>
-  </div>
-
   <header>
     <div class="logo-container">
       <a href="/">
@@ -126,50 +120,6 @@
         <img src="/images/celina-trust-1.jpg" alt="Dog care in Celina Texas">
         <img src="/images/celina-trust-2.jpg" alt="Happy dog being cared for in Celina Texas">
         <img src="/images/celina-trust-3.jpg" alt="Professional pet care in Celina Texas">
-      </div>
-    </section>
-
-    <section class="homepage-reviews">
-      <div class="homepage-reviews-container">
-        <div class="section-heading">
-          <h2>Trusted by Local Dog Owners</h2>
-          <p>Real reviews from happy clients across Celina and surrounding areas.</p>
-        </div>
-
-        <div class="elfsight-app-9e4d48f8-3f90-41f6-afde-8b1faced5c48" data-elfsight-app-lazy></div>
-      </div>
-    </section>
-
-    <section class="homepage-pricing">
-      <div class="homepage-pricing-container">
-        <h2>Simple, Transparent Starting Prices</h2>
-        <p>Quick pricing so you know what to expect before reaching out.</p>
-
-        <div class="pricing-cards">
-          <div class="pricing-card homepage-pricing-card">
-            <h3>Dog Walking</h3>
-            <p class="price">Starting at $15</p>
-            <p>Structured walks designed to burn energy, improve behavior, and support your dog’s overall health.</p>
-          </div>
-
-          <div class="pricing-card homepage-pricing-card">
-            <h3>Drop-In Visits</h3>
-            <p class="price">Starting at $15</p>
-            <p>Perfect for potty breaks, feeding, and quick check-ins during the day.</p>
-          </div>
-
-          <div class="pricing-card homepage-pricing-card">
-            <h3>Dog Boarding</h3>
-            <p class="price">Starting at $85/day</p>
-            <p>Comfortable home-style boarding with personalized care, potty breaks, and updates.</p>
-          </div>
-        </div>
-
-        <div class="pricing-cta">
-          <a href="https://pawsinstride.com/index.html?page=services" class="cta-button secondary">
-            VIEW FULL PRICING & SERVICES
-          </a>
-        </div>
       </div>
     </section>
 
@@ -266,6 +216,17 @@
       </div>
     </section>
 
+    <section class="homepage-reviews">
+      <div class="homepage-reviews-container">
+        <div class="section-heading">
+          <h2>Trusted by Local Dog Owners</h2>
+          <p>Real reviews from happy clients across Celina and surrounding areas.</p>
+        </div>
+
+        <div class="elfsight-app-9e4d48f8-3f90-41f6-afde-8b1faced5c48" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+
     <section class="service-areas">
       <div class="service-areas-container">
         <h2>Visit Our Main Website</h2>
@@ -308,16 +269,6 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-    function closeNotificationBar() {
-      document.getElementById("notification-bar").style.display = "none";
-      localStorage.setItem("notificationClosed", "true");
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      if (localStorage.getItem("notificationClosed") === "true") {
-        document.getElementById("notification-bar").style.display = "none";
-      }
 
       function removeElfsightBranding() {
         const elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
