@@ -2438,15 +2438,15 @@ html {
 ========================= */
 
 .celina-domain-page .trust-grid img:nth-child(1) {
-    object-position: center 18%;
+    object-position: center 80%;
 }
 
 .celina-domain-page .trust-grid img:nth-child(2) {
-    object-position: center 50%;
+    object-position: center 43%;
 }
 
 .celina-domain-page .trust-grid img:nth-child(3) {
-    object-position: center 45%;
+    object-position: center 52%;
 }
 
 @media (max-width: 980px) {
